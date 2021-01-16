@@ -1,13 +1,22 @@
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FeatureAModule } from './features/feature-a/feature-a.module';
-import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { InitService } from './core/services/init.service';
+import { STATES } from './core/store/states.state';
+import { FeatureAModule } from './features/feature-a/feature-a.module';
 import { FeatureBModule } from './features/feature-b/feature-b.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './styles/material/material.module';
+import { SharedModule } from './shared/shared.module';
+
+export function initializeApp(initService: InitService) {
+  return (): Promise<any> => {
+    return initService.init();
+  };
+}
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,9 +27,19 @@ import { MaterialModule } from './styles/material/material.module';
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    NgxsModule.forRoot(STATES, {
+      developmentMode: !environment.production,
+    }),
   ],
-  providers: [],
+  providers: [
+    InitService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [InitService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
