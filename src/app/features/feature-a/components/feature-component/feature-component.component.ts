@@ -8,5 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class FeatureComponentComponent implements OnInit {
   constructor() {}
 
+  /**
+   * Initializes the FeatureComponent
+   */
   ngOnInit(): void {}
 }

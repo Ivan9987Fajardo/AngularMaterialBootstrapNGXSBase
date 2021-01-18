@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
   events: string[] = [];
   opened!: boolean;
   constructor() {}
-
+  /**
+   * Initializes the Header Component
+   */
   ngOnInit(): void {}
 }

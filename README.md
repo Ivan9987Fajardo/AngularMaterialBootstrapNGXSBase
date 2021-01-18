@@ -1,27 +1,43 @@
 # AngularMaterialBase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+This Angular 10 Base consists of Angular Material Base, NGXS, CompoDoc, App Initializer, and Resolver. A Demo Component has been added for your reference.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1.  Install `Visual Studio Code` at `https://code.visualstudio.com/`
+2.  Open `Visual Studio Code`. From the `Extensions (Ctrl+Shift+X)` sidebar, Install the following:
 
-## Code scaffolding
+    1.  Git Lens
+    2.  TSLint
+    3.  Prettier
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+        1. In VS Code, File -> Preferences -> Settings -> Search “Formatter” -> Set Prettier As Default Formatter -> Check “Format on Save”
+           2.Open the settings (⇧⌘P or Ctrl+Shift+P), find Preferences: Configure Language Specific Settings... and then find the TypeScript. It will open the settings.json file. Now add the configuration.
+
+        "[typescript]": {
+
+            "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+            }
+
+        },
+        "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+        }
+        },
+        "js/ts.implicitProjectConfig.experimentalDecorators": true,
+        "tslint.rulesDirectory": "./node_modules/codelyzer",
+        "typescript.tsdk": "node_modules/typescript/lib"
+
+## Patch
+
+Make sure to run `npm run lint` and fix lint issues before pushing to your own repository.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Documentation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run documentation` to generate documentation files by CompoDoc. Documentation files will be stored in the `/documentation` directory.

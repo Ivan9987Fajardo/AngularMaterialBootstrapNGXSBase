@@ -40,8 +40,14 @@ export class DemoComponent implements OnInit {
     });
   }
 
+  /**
+   * Initializes the Demo Page
+   */
   ngOnInit(): void {}
 
+  /**
+   * Opens the DemoModalComponent, when the user clicks the Create User Button
+   */
   openCreateModal(): void {
     const user: User = {
       name: '',
@@ -66,6 +72,10 @@ export class DemoComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens the Demo Modal Component when the user clicks a record on the table
+   * @param index
+   */
   openModifyModal(index: number): void {
     const userSubscribe = this.users$.subscribe((users) => {
       const user = users[index];
@@ -90,18 +100,33 @@ export class DemoComponent implements OnInit {
     userSubscribe.unsubscribe();
   }
 
+  /**
+   * Used to add a User Object on the User Array on the Store
+   * @param user
+   */
   addUser(user: User) {
     this.store.dispatch(new CreateUser(user));
   }
-
+  /**
+   * Updates a User Object from the Store
+   * @param index
+   * @param user
+   */
   updateUser(index: number, user: User) {
     this.store.dispatch(new UpdateUser(index, user));
   }
 
+  /**
+   * Deletes a User Object from the Store
+   * @param index
+   */
   deleteUser(index: any) {
     this.store.dispatch(new DeleteUser(index));
   }
 
+  /**
+   * Gets the User Array Object from the store
+   */
   getUsers() {
     return this.users$;
   }

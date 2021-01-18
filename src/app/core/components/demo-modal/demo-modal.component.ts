@@ -13,9 +13,14 @@ export class DemoModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: User
   ) {}
 
+  /**
+   * Triggers when the user clicks outside the modal
+   */
   onNoClick(): void {
     this.dialogRef.close();
   }
-
+  /**
+   * Initializes the DemoModalComponent
+   */
   ngOnInit(): void {}
 }

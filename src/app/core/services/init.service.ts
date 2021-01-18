@@ -14,6 +14,9 @@ export class InitService {
   constructor(private http: HttpClient, private store: Store) {
     this.config = this.store.select((state) => state.config);
   }
+  /**
+   * Gets the value from config.json and adds it to the 'config' object in the store
+   */
   init() {
     return new Promise<void>((resolve, reject) => {
       console.log('AppInitService.init() called');

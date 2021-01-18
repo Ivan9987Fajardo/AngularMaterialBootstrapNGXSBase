@@ -10,7 +10,11 @@ import { HttpService } from '../../services/http.service';
 @Injectable()
 export class DemoResolver implements Resolve<User> {
   constructor(private http: HttpService) {}
-
+  /**
+   * Calls the Web Service from '/users' before loading the page
+   * @param route
+   * @param state
+   */
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
