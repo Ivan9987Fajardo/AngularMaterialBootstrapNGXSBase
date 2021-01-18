@@ -7,6 +7,6 @@ import { Store } from '@ngxs/store';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'AngularMaterialBase';
+  title = 'AngularBootstrapBase';
   constructor(private store: Store) {}
 }

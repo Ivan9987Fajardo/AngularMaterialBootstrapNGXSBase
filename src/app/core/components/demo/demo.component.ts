@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -9,7 +8,6 @@ import {
   DeleteUser,
   UpdateUser,
 } from 'src/app/core/store/actions/user.action';
-import { DemoModalComponent } from '../demo-modal/demo-modal.component';
 
 @Component({
   selector: 'app-demo',
@@ -27,11 +25,7 @@ export class DemoComponent implements OnInit {
     'website',
     'action',
   ];
-  constructor(
-    private store: Store,
-    private actRoute: ActivatedRoute,
-    public dialog: MatDialog
-  ) {
+  constructor(private store: Store, private actRoute: ActivatedRoute) {
     this.users$ = this.store.select((state) => state.users.users);
     this.actRoute.data.subscribe((data) => {
       data.users.forEach((user: User) => {
@@ -44,61 +38,6 @@ export class DemoComponent implements OnInit {
    * Initializes the Demo Page
    */
   ngOnInit(): void {}
-
-  /**
-   * Opens the DemoModalComponent, when the user clicks the Create User Button
-   */
-  openCreateModal(): void {
-    const user: User = {
-      name: '',
-      username: '',
-      email: '',
-      phone: '',
-      website: '',
-    };
-    const dialogRef = this.dialog.open(DemoModalComponent, {
-      width: '250px',
-      data: {
-        name: user.name,
-        username: user.username,
-        email: user.email,
-        phone: user.phone,
-        website: user.website,
-      },
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) this.addUser(result);
-    });
-  }
-
-  /**
-   * Opens the Demo Modal Component when the user clicks a record on the table
-   * @param index
-   */
-  openModifyModal(index: number): void {
-    const userSubscribe = this.users$.subscribe((users) => {
-      const user = users[index];
-
-      const dialogRef = this.dialog.open(DemoModalComponent, {
-        width: '250px',
-        data: {
-          name: user.name,
-          username: user.username,
-          email: user.email,
-          phone: user.phone,
-          website: user.website,
-        },
-      });
-
-      dialogRef.afterClosed().subscribe((result) => {
-        if (result) {
-          this.updateUser(index, result);
-        }
-      });
-    });
-    userSubscribe.unsubscribe();
-  }
 
   /**
    * Used to add a User Object on the User Array on the Store

@@ -78,27 +78,27 @@
 <path fill="none" stroke="black" d="M85,-122.11C85,-141.34 85,-169 85,-169 85,-169 262.55,-169 262.55,-169"/>
 <polygon fill="black" stroke="black" points="262.55,-172.5 272.55,-169 262.55,-165.5 262.55,-172.5"/>
 </g>
-<!-- MaterialModule  -->
+<!-- BootstrapModule  -->
 <g id="node6" class="node">
-<title>MaterialModule </title>
+<title>BootstrapModule </title>
 <polygon fill="#fb8072" stroke="black" points="371.47,-252 260.53,-252 260.53,-216 371.47,-216 371.47,-252"/>
-<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00">MaterialModule </text>
+<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00">BootstrapModule </text>
 </g>
-<!-- CoreModule&#45;&gt;MaterialModule  -->
+<!-- CoreModule&#45;&gt;BootstrapModule  -->
 <g id="edge5" class="edge">
-<title>CoreModule&#45;&gt;MaterialModule </title>
+<title>CoreModule&#45;&gt;BootstrapModule </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M316,-187.11C316,-187.11 316,-205.99 316,-205.99"/>
 <polygon fill="black" stroke="black" points="312.5,-205.99 316,-215.99 319.5,-205.99 312.5,-205.99"/>
 </g>
-<!-- MaterialModule -->
+<!-- BootstrapModule -->
 <g id="node5" class="node">
-<title>MaterialModule</title>
+<title>BootstrapModule</title>
 <polygon fill="#8dd3c7" stroke="black" points="580.47,-122 577.47,-126 556.47,-126 553.47,-122 473.53,-122 473.53,-86 580.47,-86 580.47,-122"/>
-<text text-anchor="middle" x="527" y="-99.8" font-family="Times,serif" font-size="14.00">MaterialModule</text>
+<text text-anchor="middle" x="527" y="-99.8" font-family="Times,serif" font-size="14.00">BootstrapModule</text>
 </g>
-<!-- MaterialModule&#45;&gt;CoreModule -->
+<!-- BootstrapModule&#45;&gt;CoreModule -->
 <g id="edge4" class="edge">
-<title>MaterialModule&#45;&gt;CoreModule</title>
+<title>BootstrapModule&#45;&gt;CoreModule</title>
 <path fill="none" stroke="black" d="M527,-122.11C527,-141.34 527,-169 527,-169 527,-169 369.46,-169 369.46,-169"/>
 <polygon fill="black" stroke="black" points="369.46,-165.5 359.46,-169 369.46,-172.5 369.46,-165.5"/>
 </g>

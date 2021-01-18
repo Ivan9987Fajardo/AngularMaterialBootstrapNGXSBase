@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>angular-material-base documentation</title>
+        <title>angular-bootstrap-base documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">angular-material-base documentation</a>
+            <a href="../" class="navbar-brand">angular-bootstrap-base documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -119,27 +119,27 @@
 <path fill="none" stroke="black" d="M85,-122.11C85,-141.34 85,-169 85,-169 85,-169 262.55,-169 262.55,-169"/>
 <polygon fill="black" stroke="black" points="262.55,-172.5 272.55,-169 262.55,-165.5 262.55,-172.5"/>
 </g>
-<!-- MaterialModule  -->
+<!-- BootstrapModule  -->
 <g id="node6" class="node">
-<title>MaterialModule </title>
+<title>BootstrapModule </title>
 <polygon fill="#fb8072" stroke="black" points="371.47,-252 260.53,-252 260.53,-216 371.47,-216 371.47,-252"/>
-<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00">MaterialModule </text>
+<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00">BootstrapModule </text>
 </g>
-<!-- CoreModule&#45;&gt;MaterialModule  -->
+<!-- CoreModule&#45;&gt;BootstrapModule  -->
 <g id="edge5" class="edge">
-<title>CoreModule&#45;&gt;MaterialModule </title>
+<title>CoreModule&#45;&gt;BootstrapModule </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M316,-187.11C316,-187.11 316,-205.99 316,-205.99"/>
 <polygon fill="black" stroke="black" points="312.5,-205.99 316,-215.99 319.5,-205.99 312.5,-205.99"/>
 </g>
-<!-- MaterialModule -->
+<!-- BootstrapModule -->
 <g id="node5" class="node">
-<title>MaterialModule</title>
+<title>BootstrapModule</title>
 <polygon fill="#8dd3c7" stroke="black" points="580.47,-122 577.47,-126 556.47,-126 553.47,-122 473.53,-122 473.53,-86 580.47,-86 580.47,-122"/>
-<text text-anchor="middle" x="527" y="-99.8" font-family="Times,serif" font-size="14.00">MaterialModule</text>
+<text text-anchor="middle" x="527" y="-99.8" font-family="Times,serif" font-size="14.00">BootstrapModule</text>
 </g>
-<!-- MaterialModule&#45;&gt;CoreModule -->
+<!-- BootstrapModule&#45;&gt;CoreModule -->
 <g id="edge4" class="edge">
-<title>MaterialModule&#45;&gt;CoreModule</title>
+<title>BootstrapModule&#45;&gt;CoreModule</title>
 <path fill="none" stroke="black" d="M527,-122.11C527,-141.34 527,-169 527,-169 527,-169 369.46,-169 369.46,-169"/>
 <polygon fill="black" stroke="black" points="369.46,-165.5 359.46,-169 369.46,-172.5 369.46,-165.5"/>
 </g>
@@ -201,7 +201,7 @@
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../modules/MaterialModule.html">MaterialModule</a>
+                            <a href="../modules/BootstrapModule.html">BootstrapModule</a>
                         </li>
                     </ul>
                 </div>
@@ -210,7 +210,7 @@
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../modules/MaterialModule.html">MaterialModule</a>
+                            <a href="../modules/BootstrapModule.html">BootstrapModule</a>
                         </li>
                     </ul>
                 </div>
@@ -226,15 +226,15 @@
 import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
-import { MaterialModule } from &#x27;../styles/material/material.module&#x27;;
+import { BootstrapModule } from &#x27;../styles/bootstrap/bootstrap.module&#x27;;
 import { DemoModalComponent } from &#x27;./components/demo-modal/demo-modal.component&#x27;;
 import { DemoComponent } from &#x27;./components/demo/demo.component&#x27;;
 import { HeaderComponent } from &#x27;./components/header/header.component&#x27;;
 
 @NgModule({
   declarations: [DemoComponent, HeaderComponent, DemoModalComponent],
-  imports: [CommonModule, MaterialModule, FormsModule, HttpClientModule],
-  exports: [MaterialModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, BootstrapModule, FormsModule, HttpClientModule],
+  exports: [BootstrapModule, FormsModule, HttpClientModule],
 })
 export class CoreModule {}
 </code></pre>
