@@ -28,8 +28,8 @@ export class DemoComponent implements OnInit {
     'action',
   ];
   constructor(
-    private store: Store,
-    private actRoute: ActivatedRoute,
+    private readonly store: Store,
+    private readonly actRoute: ActivatedRoute,
     public dialog: MatDialog
   ) {
     this.users$ = this.store.select((state) => state.users.users);

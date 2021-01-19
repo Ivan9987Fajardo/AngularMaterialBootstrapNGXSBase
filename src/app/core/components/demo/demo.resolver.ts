@@ -9,7 +9,7 @@ import { User } from '../../models/user.model';
 import { HttpService } from '../../services/http.service';
 @Injectable()
 export class DemoResolver implements Resolve<User> {
-  constructor(private http: HttpService) {}
+  constructor(private readonly http: HttpService) {}
   /**
    * Calls the Web Service from '/users' before loading the page
    * @param route

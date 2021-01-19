@@ -11,7 +11,10 @@ import { SetConfig } from '../store/actions/config.action';
 export class InitService {
   configUrl: string = 'assets/config.json';
   config: Observable<Config>;
-  constructor(private http: HttpClient, private store: Store) {
+  constructor(
+    private readonly http: HttpClient,
+    private readonly store: Store
+  ) {
     this.config = this.store.select((state) => state.config);
   }
   /**
