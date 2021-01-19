@@ -8,5 +8,5 @@ import { Store } from '@ngxs/store';
 })
 export class AppComponent {
   title = 'AngularBootstrapBase';
-  constructor(private store: Store) {}
+  constructor(private readonly store: Store) {}
 }

@@ -1,1 +1,28 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Users</a>
+    <ng-template ngbNavContent>
+      <p>
+        <ng-content select="[slot=1]"></ng-content>
+      </p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Two</a>
+    <ng-template ngbNavContent>
+      <p>
+        <ng-content select="[slot=2]"></ng-content>
+      </p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Three</a>
+    <ng-template ngbNavContent>
+      <p>
+        <ng-content select="[slot=3]"></ng-content>
+      </p>
+    </ng-template>
+  </li>
+</ul>
 
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

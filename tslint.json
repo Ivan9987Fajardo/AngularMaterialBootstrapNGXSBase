@@ -13,6 +13,7 @@
     "no-forward-ref": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
+    "no-empty-interface": true,
     "no-inputs-metadata-property": true,
     "no-lifecycle-call": true,
     "no-output-native": true,
@@ -34,19 +35,128 @@
     "use-component-view-encapsulation": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-
-    "completed-docs": [
+    "no-unnecessary-class": [
+      true,
+      "allow-constructor-only",
+      "allow-static-only",
+      "allow-empty-class"
+    ],
+    "member-access": [true, "no-public"],
+    "no-parameter-reassignment": true,
+    "only-arrow-functions": true,
+    "member-ordering": [
       true,
       {
-        "enums": true,
-        "functions": {
-          "visibilities": "exported"
-        },
-        "methods": {
-          "location": "instance",
-          "privacies": ["public", "protected"]
-        }
+        "order": [
+          "public-static-field",
+          "public-instance-field",
+          "public-constructor",
+          "private-static-field",
+          "private-instance-field",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
       }
-    ]
-  }
+    ],
+    "await-promise": true,
+    "no-return-await": true,
+    "prefer-const": true,
+    "no-var-keyword": true,
+    "no-unnecessary-initializer": true,
+    "prefer-readonly": true,
+    "prefer-function-over-method": [true, "allow-public", "allow-protected"],
+    "no-invalid-this": [true, "check-function-in-method"],
+    "no-construct": true,
+    "completed-docs": [true, "enums", "functions", "methods"]
+  },
+  "no-require-imports": true,
+  "no-unused-expression": [true, "allow-fast-null-checks"],
+  "no-namespace": true,
+  "no-eval": true,
+  "comment-format": [true, "check-space"],
+  "jsdoc-format": [true, "check-multiline-start"],
+  "variable-name": [
+    true,
+    "check-format",
+    "allow-leading-underscore",
+    "require-const-for-all-caps",
+    "ban-keywords"
+  ],
+  "class-name": true,
+  "semicolon": [true, "always", "strict-bound-class-methods"],
+  "no-consecutive-blank-lines": [true, 1],
+  "one-line": [
+    true,
+    "check-open-brace",
+    "check-whitespace",
+    "check-else",
+    "check-catch",
+    "check-finally"
+  ],
+  "newline-per-chained-call": true,
+  "newline-before-return": true,
+  "no-trailing-whitespace": true,
+  "import-spacing": true,
+  "space-before-function-paren": [
+    true,
+    {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always",
+      "method": "never",
+      "constructor": "never"
+    }
+  ],
+  "whitespace": [
+    true,
+    "check-branch",
+    "check-decl",
+    "check-operator",
+    "check-module",
+    "check-separator",
+    "check-type",
+    "check-typecast",
+    "check-type-operator",
+    "check-preblock"
+  ],
+  "eofline": true,
+  "switch-default": true,
+  "no-switch-case-fall-through": true,
+  "no-duplicate-switch-case": true,
+  "strict-boolean-expressions": [
+    true,
+    "allow-undefined-union",
+    "allow-string",
+    "allow-enum",
+    "allow-number",
+    "allow-mix",
+    "allow-rhs"
+  ],
+  "unnecessary-else": [
+    true,
+    {
+      "allow-else-if": true
+    }
+  ],
+  "no-tautology-expression": true,
+  "use-isnan": true,
+  "binary-expression-operand-order": true,
+  "increment-decrement": [true, "allow-post"],
+  "triple-equals": [true, "allow-null-check"],
+  "prefer-template": true,
+  "quotemark": [true, "single", "avoid-template", "avoid-escape"],
+  "array-type": [true, "generic"],
+  "typedef": [true, "call-signature", "property-declaration"],
+  "no-reference": true,
+  "no-duplicate-imports": true,
+  "ordered-imports": [
+    true,
+    {
+      "import-sources-order": "case-insensitive",
+      "named-imports-order": "case-insensitive",
+      "grouped-imports": false
+    }
+  ]
 }

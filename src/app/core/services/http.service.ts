@@ -10,7 +10,10 @@ import { Config } from '../models/config.model';
 export class HttpService {
   config$: Observable<Config>;
   api!: string;
-  constructor(private http: HttpClient, private store: Store) {
+  constructor(
+    private readonly http: HttpClient,
+    private readonly store: Store
+  ) {
     this.config$ = this.store.select((state) => state.config.config);
     this.config$.subscribe((config) => {
       this.api = config.api;

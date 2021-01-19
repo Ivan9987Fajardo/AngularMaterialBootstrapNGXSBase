@@ -1,1 +1,79 @@
+<div class="modal-header">
+  <div *ngIf="user.name; then updateBlock; else createBlock"></div>
+  <ng-template #createBlock><h4 class="modal-title">Hi there!</h4></ng-template>
 
+  <ng-template #updateBlock>
+    <h4 class="modal-title">Hi {{ user.name }}!</h4>
+  </ng-template>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Enter Name"
+      [(ngModel)]="user.name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      placeholder="Enter Username"
+      [(ngModel)]="user.username"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="Enter Email"
+      [(ngModel)]="user.email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input
+      type="phone"
+      class="form-control"
+      id="phone"
+      placeholder="Enter Phone"
+      [(ngModel)]="user.phone"
+    />
+  </div>
+  <div class="form-group">
+    <label for="website">Website</label>
+    <input
+      type="text"
+      class="form-control"
+      id="website"
+      placeholder="Enter Website"
+      [(ngModel)]="user.website"
+    />
+  </div>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    ngbAutofocus
+    (click)="returnUser()"
+  >
+    Close
+  </button>
+</div>

@@ -11,12 +11,15 @@ import { STATES } from './core/store/states.state';
 import { FeatureAModule } from './features/feature-a/feature-a.module';
 import { FeatureBModule } from './features/feature-b/feature-b.module';
 import { SharedModule } from './shared/shared.module';
-
-export function initializeApp(initService: InitService) {
+/**
+ * Used to get the value from the config file on startup
+ * @param initService
+ */
+export const initializeApp = (initService: InitService) => {
   return (): Promise<any> => {
     return initService.init();
   };
-}
+};
 @NgModule({
   declarations: [AppComponent],
   imports: [

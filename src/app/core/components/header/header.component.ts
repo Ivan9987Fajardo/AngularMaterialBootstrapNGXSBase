@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   events: string[] = [];
   opened!: boolean;
+  active = 1;
   constructor() {}
   /**
    * Initializes the Header Component

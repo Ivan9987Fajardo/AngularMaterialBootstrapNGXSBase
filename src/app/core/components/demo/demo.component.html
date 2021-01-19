@@ -1,1 +1,43 @@
-
+<app-header>
+  <ng-container slot="1">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Website</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let user of users$ | async;
+            index as i;
+            trackBy: trackByUsername
+          "
+        >
+          <th scope="row" (click)="updateUserModal(i)">{{ i + 1 }}</th>
+          <td (click)="updateUserModal(i)">
+            {{ user.name }}
+          </td>
+          <td (click)="updateUserModal(i)">{{ user.username }}</td>
+          <td (click)="updateUserModal(i)">{{ user.email }}</td>
+          <td (click)="updateUserModal(i)">{{ user.phone }}</td>
+          <td (click)="updateUserModal(i)">{{ user.website }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteUser(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="createUserModal()">
+      Create User
+    </button>
+  </ng-container>
+</app-header>

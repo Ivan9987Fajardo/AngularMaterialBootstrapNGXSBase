@@ -45,7 +45,9 @@ export class UserState {
     { getState, patchState }: StateContext<UserStateModel>,
     { index, user }: UpdateUser
   ) {
-    let state = getState().users.filter((user, indexFun) => indexFun != index);
+    const state = getState().users.filter(
+      (user, indexFun) => indexFun != index
+    );
     state.splice(index, 0, user);
     patchState({
       users: state,
