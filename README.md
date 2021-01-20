@@ -1,6 +1,6 @@
-# AngularMaterialBase
+# AngularMaterialBootstrapBase
 
-This Angular 10 Base consists of Angular Material Base, NGXS, CompoDoc, App Initializer, and Resolver. A Demo Component has been added for your reference.
+This Angular 10 Base consists of Angular Material/Bootstrap, NGXS, CompoDoc, App Initializer, and Resolver. A Demo Component has been added for your reference.
 
 ## Installation
 
